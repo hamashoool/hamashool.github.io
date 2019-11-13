@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    function confirmPass() {
+        var pass = document.getElementById("id_password").value
+        var confPass = document.getElementById("id_password2").value
+        if(pass != confPass) {
+            alert('Wrong confirm password !');
+        }
+    }
+</script>
+</head>
+<body>
+    <div class="containser">
+        <div class="row">
+            <div class="col-sm-5 col-md-5 col-lg-5 main_body-r">
+                <h1>Registration Page</h1>
+                <form class="form" onSubmit = "return confirmPass(this)">
+                        <div class="items">
+                            <input type="text" name="full_name" id="id_full_name" placeholder="full name">
+                        </div>
+                    <div class="items">
+                        <input type="email" name="email" id="id_email" placeholder="email" required>
+                    </div>
+                    <div class="items">
+                        <input type="password" name="password1" id="id_password" placeholder="password">
+                    </div>
+                    <div class="items">
+                        <input type="password" name="password2" id="id_password2" placeholder="confirm password">
+                    </div>
+                    <div class="items">
+                        <select class="browser-default custom-select">
+                            <option selected>Who are you?</option>
+                            <option value="1">Restautant</option>
+                            <option value="2">Person</option>
+                        </select>
+                    </div>
+                    <div class="items button-sec-orng">
+                        <input type="submit" value="submit">
+                        <p>Already have an account? <a href="login.html" style="color: #ffca07;">login</a></p>
+                    </div>
+                </form>
+                <div class="container">
+                </div>
+            </div>
+            <div class="col-sm-7 col-md-7 col-lg-7 d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block right-r mr">
+                <h1></h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
